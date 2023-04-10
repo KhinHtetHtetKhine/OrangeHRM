@@ -1,0 +1,722 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.9.7 on darwin)" generated="20230410 14:39:52.459" rpa="false" schemaversion="3">
+<suite id="s1" name="Login Tests" source="/Users/mac/PycharmProjects/OrangeHRM/tests/Login_Tests.robot">
+<test id="s1-t1" name="Verify login is successful with valid credentials" line="16">
+<kw name="Start Test Case" library="CommonFunctionality" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${orangeHRM}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230410 14:39:52.731" level="INFO">Opening browser 'Firefox' to base url 'https://khinhtet-trials77.orangehrmlive.com/auth/seamlessLogin'.</msg>
+<msg timestamp="20230410 14:39:52.732" level="INFO">Firefox driver log is always forced to to: /Users/mac/PycharmProjects/OrangeHRM/result/geckodriver-6.log</msg>
+<status status="PASS" starttime="20230410 14:39:52.730" endtime="20230410 14:40:03.126"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Open Browsser Successfully</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230410 14:40:03.127" level="INFO">Open Browsser Successfully</msg>
+<status status="PASS" starttime="20230410 14:40:03.127" endtime="20230410 14:40:03.127"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230410 14:40:03.128" endtime="20230410 14:40:03.133"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Maximize Browser Successfully</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230410 14:40:03.134" level="INFO">Maximize Browser Successfully</msg>
+<status status="PASS" starttime="20230410 14:40:03.133" endtime="20230410 14:40:03.134"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>OrangeHRM</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230410 14:40:03.137" level="INFO">Page title is 'OrangeHRM'.</msg>
+<status status="PASS" starttime="20230410 14:40:03.134" endtime="20230410 14:40:03.137"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Correct title shows (OrangeHRM)</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230410 14:40:03.138" level="INFO">Correct title shows (OrangeHRM)</msg>
+<status status="PASS" starttime="20230410 14:40:03.137" endtime="20230410 14:40:03.138"/>
+</kw>
+<status status="PASS" starttime="20230410 14:39:52.729" endtime="20230410 14:40:03.138"/>
+</kw>
+<kw name="Go to Log In Form" library="Login">
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Login}</var>
+<arg>${login}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230410 14:40:03.175" level="INFO">${Login} = Login</msg>
+<status status="PASS" starttime="20230410 14:40:03.139" endtime="20230410 14:40:03.175"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${Login}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230410 14:40:03.176" level="INFO">Login</msg>
+<status status="PASS" starttime="20230410 14:40:03.176" endtime="20230410 14:40:03.176"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${Login}</arg>
+<arg>Login</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230410 14:40:03.176" endtime="20230410 14:40:03.177"/>
+</kw>
+<status status="PASS" starttime="20230410 14:40:03.138" endtime="20230410 14:40:03.177"/>
+</kw>
+<kw name="Enter Username" library="Login">
+<arg>${username}</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${input_username}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230410 14:40:03.181" level="INFO">Clicking element 'xpath://*[@id="txtUsername"]'.</msg>
+<status status="PASS" starttime="20230410 14:40:03.180" endtime="20230410 14:40:03.418"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Clik on Username inbox</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230410 14:40:03.418" level="INFO">Clik on Username inbox</msg>
+<status status="PASS" starttime="20230410 14:40:03.418" endtime="20230410 14:40:03.419"/>
+</kw>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<var>${username_attr}</var>
+<arg>${input_username}</arg>
+<arg>placeholder</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<msg timestamp="20230410 14:40:03.462" level="INFO">${username_attr} = Username</msg>
+<status status="PASS" starttime="20230410 14:40:03.419" endtime="20230410 14:40:03.462"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${username_attr}</arg>
+<arg>Username</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230410 14:40:03.462" endtime="20230410 14:40:03.463"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_username}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230410 14:40:03.465" level="INFO">Typing text 'Admin' into text field 'xpath://*[@id="txtUsername"]'.</msg>
+<status status="PASS" starttime="20230410 14:40:03.464" endtime="20230410 14:40:03.532"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Enter username successfully</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230410 14:40:03.533" level="INFO">Enter username successfully</msg>
+<status status="PASS" starttime="20230410 14:40:03.532" endtime="20230410 14:40:03.533"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230410 14:40:06.534" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230410 14:40:03.533" endtime="20230410 14:40:06.534"/>
+</kw>
+<status status="PASS" starttime="20230410 14:40:03.179" endtime="20230410 14:40:06.535"/>
+</kw>
+<kw name="Enter Password" library="Login">
+<arg>${password}</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${input_pw}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230410 14:40:06.537" level="INFO">Clicking element 'xpath://*[@id="txtPassword"]'.</msg>
+<status status="PASS" starttime="20230410 14:40:06.536" endtime="20230410 14:40:06.771"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Click on Password inbox</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230410 14:40:06.771" level="INFO">Click on Password inbox</msg>
+<status status="PASS" starttime="20230410 14:40:06.771" endtime="20230410 14:40:06.771"/>
+</kw>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<var>${pw_attr}</var>
+<arg>${input_pw}</arg>
+<arg>placeholder</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<msg timestamp="20230410 14:40:06.791" level="INFO">${pw_attr} = Password</msg>
+<status status="PASS" starttime="20230410 14:40:06.771" endtime="20230410 14:40:06.791"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${pw_attr}</arg>
+<arg>Password</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230410 14:40:06.792" endtime="20230410 14:40:06.792"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_pw}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230410 14:40:06.793" level="INFO">Typing text 'OqKh8@fZY2' into text field 'xpath://*[@id="txtPassword"]'.</msg>
+<status status="PASS" starttime="20230410 14:40:06.792" endtime="20230410 14:40:06.835"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Enter password successfully</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230410 14:40:06.836" level="INFO">Enter password successfully</msg>
+<status status="PASS" starttime="20230410 14:40:06.835" endtime="20230410 14:40:06.836"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230410 14:40:09.839" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230410 14:40:06.836" endtime="20230410 14:40:09.839"/>
+</kw>
+<status status="PASS" starttime="20230410 14:40:06.535" endtime="20230410 14:40:09.839"/>
+</kw>
+<kw name="Click Login Button" library="Login">
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Loginbutton}</var>
+<arg>${loginbutton}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230410 14:40:09.860" level="INFO">${Loginbutton} = Login</msg>
+<status status="PASS" starttime="20230410 14:40:09.840" endtime="20230410 14:40:09.860"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${Loginbutton}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230410 14:40:09.861" level="INFO">Login</msg>
+<status status="PASS" starttime="20230410 14:40:09.860" endtime="20230410 14:40:09.861"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${Loginbutton}</arg>
+<arg>Login</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230410 14:40:09.861" endtime="20230410 14:40:09.861"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Verify login button</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230410 14:40:09.861" level="INFO">Verify login button</msg>
+<status status="PASS" starttime="20230410 14:40:09.861" endtime="20230410 14:40:09.861"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${buttonlink}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230410 14:40:09.862" level="INFO">Clicking element 'xpath://*[@id="frmLogin"]/div[3]/button/img'.</msg>
+<status status="PASS" starttime="20230410 14:40:09.861" endtime="20230410 14:40:17.059"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Can click log in successfully</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230410 14:40:17.060" level="INFO">Can click log in successfully</msg>
+<status status="PASS" starttime="20230410 14:40:17.060" endtime="20230410 14:40:17.060"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230410 14:40:20.061" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230410 14:40:17.060" endtime="20230410 14:40:20.062"/>
+</kw>
+<status status="PASS" starttime="20230410 14:40:09.840" endtime="20230410 14:40:20.062"/>
+</kw>
+<kw name="Finish Test Case" library="CommonFunctionality" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230410 14:40:20.062" endtime="20230410 14:40:22.434"/>
+</kw>
+<status status="PASS" starttime="20230410 14:40:20.062" endtime="20230410 14:40:22.434"/>
+</kw>
+<doc>Login</doc>
+<tag>Positive Test Case</tag>
+<status status="PASS" starttime="20230410 14:39:52.729" endtime="20230410 14:40:22.435"/>
+</test>
+<test id="s1-t2" name="Verify proper error message shows for invalid username" line="24">
+<kw name="Start Test Case" library="CommonFunctionality" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${orangeHRM}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230410 14:40:22.437" level="INFO">Opening browser 'Firefox' to base url 'https://khinhtet-trials77.orangehrmlive.com/auth/seamlessLogin'.</msg>
+<msg timestamp="20230410 14:40:22.438" level="INFO">Firefox driver log is always forced to to: /Users/mac/PycharmProjects/OrangeHRM/result/geckodriver-7.log</msg>
+<status status="PASS" starttime="20230410 14:40:22.437" endtime="20230410 14:40:31.776"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Open Browsser Successfully</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230410 14:40:31.778" level="INFO">Open Browsser Successfully</msg>
+<status status="PASS" starttime="20230410 14:40:31.777" endtime="20230410 14:40:31.778"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230410 14:40:31.778" endtime="20230410 14:40:31.784"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Maximize Browser Successfully</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230410 14:40:31.785" level="INFO">Maximize Browser Successfully</msg>
+<status status="PASS" starttime="20230410 14:40:31.784" endtime="20230410 14:40:31.785"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>OrangeHRM</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230410 14:40:31.792" level="INFO">Page title is 'OrangeHRM'.</msg>
+<status status="PASS" starttime="20230410 14:40:31.785" endtime="20230410 14:40:31.792"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Correct title shows (OrangeHRM)</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230410 14:40:31.793" level="INFO">Correct title shows (OrangeHRM)</msg>
+<status status="PASS" starttime="20230410 14:40:31.793" endtime="20230410 14:40:31.793"/>
+</kw>
+<status status="PASS" starttime="20230410 14:40:22.436" endtime="20230410 14:40:31.793"/>
+</kw>
+<kw name="Go to Log In Form" library="Login">
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Login}</var>
+<arg>${login}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230410 14:40:31.832" level="INFO">${Login} = Login</msg>
+<status status="PASS" starttime="20230410 14:40:31.794" endtime="20230410 14:40:31.832"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${Login}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230410 14:40:31.833" level="INFO">Login</msg>
+<status status="PASS" starttime="20230410 14:40:31.832" endtime="20230410 14:40:31.833"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${Login}</arg>
+<arg>Login</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230410 14:40:31.833" endtime="20230410 14:40:31.833"/>
+</kw>
+<status status="PASS" starttime="20230410 14:40:31.794" endtime="20230410 14:40:31.833"/>
+</kw>
+<kw name="Enter Username" library="Login">
+<arg>KHHK</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${input_username}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230410 14:40:31.835" level="INFO">Clicking element 'xpath://*[@id="txtUsername"]'.</msg>
+<status status="PASS" starttime="20230410 14:40:31.834" endtime="20230410 14:40:32.071"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Clik on Username inbox</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230410 14:40:32.072" level="INFO">Clik on Username inbox</msg>
+<status status="PASS" starttime="20230410 14:40:32.072" endtime="20230410 14:40:32.072"/>
+</kw>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<var>${username_attr}</var>
+<arg>${input_username}</arg>
+<arg>placeholder</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<msg timestamp="20230410 14:40:32.100" level="INFO">${username_attr} = Username</msg>
+<status status="PASS" starttime="20230410 14:40:32.072" endtime="20230410 14:40:32.100"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${username_attr}</arg>
+<arg>Username</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230410 14:40:32.100" endtime="20230410 14:40:32.101"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_username}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230410 14:40:32.102" level="INFO">Typing text 'KHHK' into text field 'xpath://*[@id="txtUsername"]'.</msg>
+<status status="PASS" starttime="20230410 14:40:32.101" endtime="20230410 14:40:32.149"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Enter username successfully</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230410 14:40:32.150" level="INFO">Enter username successfully</msg>
+<status status="PASS" starttime="20230410 14:40:32.150" endtime="20230410 14:40:32.150"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230410 14:40:35.151" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230410 14:40:32.150" endtime="20230410 14:40:35.151"/>
+</kw>
+<status status="PASS" starttime="20230410 14:40:31.834" endtime="20230410 14:40:35.152"/>
+</kw>
+<kw name="Enter Password" library="Login">
+<arg>${password}</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${input_pw}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230410 14:40:35.154" level="INFO">Clicking element 'xpath://*[@id="txtPassword"]'.</msg>
+<status status="PASS" starttime="20230410 14:40:35.153" endtime="20230410 14:40:35.388"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Click on Password inbox</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230410 14:40:35.389" level="INFO">Click on Password inbox</msg>
+<status status="PASS" starttime="20230410 14:40:35.388" endtime="20230410 14:40:35.389"/>
+</kw>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<var>${pw_attr}</var>
+<arg>${input_pw}</arg>
+<arg>placeholder</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<msg timestamp="20230410 14:40:35.409" level="INFO">${pw_attr} = Password</msg>
+<status status="PASS" starttime="20230410 14:40:35.389" endtime="20230410 14:40:35.409"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${pw_attr}</arg>
+<arg>Password</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230410 14:40:35.410" endtime="20230410 14:40:35.410"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_pw}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230410 14:40:35.411" level="INFO">Typing text 'OqKh8@fZY2' into text field 'xpath://*[@id="txtPassword"]'.</msg>
+<status status="PASS" starttime="20230410 14:40:35.410" endtime="20230410 14:40:35.453"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Enter password successfully</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230410 14:40:35.453" level="INFO">Enter password successfully</msg>
+<status status="PASS" starttime="20230410 14:40:35.453" endtime="20230410 14:40:35.454"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230410 14:40:38.454" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230410 14:40:35.454" endtime="20230410 14:40:38.454"/>
+</kw>
+<status status="PASS" starttime="20230410 14:40:35.152" endtime="20230410 14:40:38.455"/>
+</kw>
+<kw name="Click Login Button" library="Login">
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Loginbutton}</var>
+<arg>${loginbutton}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230410 14:40:38.475" level="INFO">${Loginbutton} = Login</msg>
+<status status="PASS" starttime="20230410 14:40:38.456" endtime="20230410 14:40:38.475"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${Loginbutton}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230410 14:40:38.475" level="INFO">Login</msg>
+<status status="PASS" starttime="20230410 14:40:38.475" endtime="20230410 14:40:38.476"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${Loginbutton}</arg>
+<arg>Login</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230410 14:40:38.476" endtime="20230410 14:40:38.476"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Verify login button</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230410 14:40:38.476" level="INFO">Verify login button</msg>
+<status status="PASS" starttime="20230410 14:40:38.476" endtime="20230410 14:40:38.476"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${buttonlink}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230410 14:40:38.477" level="INFO">Clicking element 'xpath://*[@id="frmLogin"]/div[3]/button/img'.</msg>
+<status status="PASS" starttime="20230410 14:40:38.476" endtime="20230410 14:40:43.192"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Can click log in successfully</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230410 14:40:43.193" level="INFO">Can click log in successfully</msg>
+<status status="PASS" starttime="20230410 14:40:43.192" endtime="20230410 14:40:43.193"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230410 14:40:46.195" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230410 14:40:43.193" endtime="20230410 14:40:46.195"/>
+</kw>
+<status status="PASS" starttime="20230410 14:40:38.455" endtime="20230410 14:40:46.195"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${alert}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20230410 14:40:51.279" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230410 14:40:51.279" level="FAIL">Element 'xpath://*[@id="toast-container"]/div/div' not visible after 5 seconds.</msg>
+<status status="FAIL" starttime="20230410 14:40:46.196" endtime="20230410 14:40:51.282"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${getalert}</var>
+<arg>${alert}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230410 14:40:51.283" endtime="20230410 14:40:51.283"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${getalert}</arg>
+<arg>Invalid Credentials</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" starttime="20230410 14:40:51.283" endtime="20230410 14:40:51.283"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20230410 14:40:51.283" endtime="20230410 14:40:51.283"/>
+</kw>
+<kw name="Finish Test Case" library="CommonFunctionality" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230410 14:40:51.284" endtime="20230410 14:40:52.939"/>
+</kw>
+<status status="PASS" starttime="20230410 14:40:51.284" endtime="20230410 14:40:52.940"/>
+</kw>
+<doc>Login</doc>
+<tag>Negative Test Case</tag>
+<status status="FAIL" starttime="20230410 14:40:22.435" endtime="20230410 14:40:52.940">Element 'xpath://*[@id="toast-container"]/div/div' not visible after 5 seconds.</status>
+</test>
+<test id="s1-t3" name="Verify proper error message shows for invalid password" line="36">
+<kw name="Start Test Case" library="CommonFunctionality" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${orangeHRM}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230410 14:40:52.944" level="INFO">Opening browser 'Firefox' to base url 'https://khinhtet-trials77.orangehrmlive.com/auth/seamlessLogin'.</msg>
+<msg timestamp="20230410 14:40:52.945" level="INFO">Firefox driver log is always forced to to: /Users/mac/PycharmProjects/OrangeHRM/result/geckodriver-8.log</msg>
+<status status="PASS" starttime="20230410 14:40:52.942" endtime="20230410 14:41:02.833"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Open Browsser Successfully</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230410 14:41:02.835" level="INFO">Open Browsser Successfully</msg>
+<status status="PASS" starttime="20230410 14:41:02.834" endtime="20230410 14:41:02.835"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230410 14:41:02.835" endtime="20230410 14:41:02.841"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Maximize Browser Successfully</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230410 14:41:02.841" level="INFO">Maximize Browser Successfully</msg>
+<status status="PASS" starttime="20230410 14:41:02.841" endtime="20230410 14:41:02.841"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>OrangeHRM</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230410 14:41:02.844" level="INFO">Page title is 'OrangeHRM'.</msg>
+<status status="PASS" starttime="20230410 14:41:02.841" endtime="20230410 14:41:02.844"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Correct title shows (OrangeHRM)</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230410 14:41:02.845" level="INFO">Correct title shows (OrangeHRM)</msg>
+<status status="PASS" starttime="20230410 14:41:02.845" endtime="20230410 14:41:02.845"/>
+</kw>
+<status status="PASS" starttime="20230410 14:40:52.942" endtime="20230410 14:41:02.845"/>
+</kw>
+<kw name="Go to Log In Form" library="Login">
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Login}</var>
+<arg>${login}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230410 14:41:02.879" level="INFO">${Login} = Login</msg>
+<status status="PASS" starttime="20230410 14:41:02.846" endtime="20230410 14:41:02.879"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${Login}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230410 14:41:02.880" level="INFO">Login</msg>
+<status status="PASS" starttime="20230410 14:41:02.879" endtime="20230410 14:41:02.880"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${Login}</arg>
+<arg>Login</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230410 14:41:02.880" endtime="20230410 14:41:02.881"/>
+</kw>
+<status status="PASS" starttime="20230410 14:41:02.846" endtime="20230410 14:41:02.881"/>
+</kw>
+<kw name="Enter Username" library="Login">
+<arg>${username}</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${input_username}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230410 14:41:02.883" level="INFO">Clicking element 'xpath://*[@id="txtUsername"]'.</msg>
+<status status="PASS" starttime="20230410 14:41:02.882" endtime="20230410 14:41:03.119"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Clik on Username inbox</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230410 14:41:03.119" level="INFO">Clik on Username inbox</msg>
+<status status="PASS" starttime="20230410 14:41:03.119" endtime="20230410 14:41:03.119"/>
+</kw>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<var>${username_attr}</var>
+<arg>${input_username}</arg>
+<arg>placeholder</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<msg timestamp="20230410 14:41:03.142" level="INFO">${username_attr} = Username</msg>
+<status status="PASS" starttime="20230410 14:41:03.120" endtime="20230410 14:41:03.142"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${username_attr}</arg>
+<arg>Username</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230410 14:41:03.142" endtime="20230410 14:41:03.142"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_username}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230410 14:41:03.143" level="INFO">Typing text 'Admin' into text field 'xpath://*[@id="txtUsername"]'.</msg>
+<status status="PASS" starttime="20230410 14:41:03.143" endtime="20230410 14:41:03.205"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Enter username successfully</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230410 14:41:03.206" level="INFO">Enter username successfully</msg>
+<status status="PASS" starttime="20230410 14:41:03.205" endtime="20230410 14:41:03.206"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230410 14:41:06.209" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230410 14:41:03.206" endtime="20230410 14:41:06.209"/>
+</kw>
+<status status="PASS" starttime="20230410 14:41:02.882" endtime="20230410 14:41:06.209"/>
+</kw>
+<kw name="Enter Password" library="Login">
+<arg>123456</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${input_pw}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230410 14:41:06.211" level="INFO">Clicking element 'xpath://*[@id="txtPassword"]'.</msg>
+<status status="PASS" starttime="20230410 14:41:06.211" endtime="20230410 14:41:06.446"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Click on Password inbox</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230410 14:41:06.447" level="INFO">Click on Password inbox</msg>
+<status status="PASS" starttime="20230410 14:41:06.446" endtime="20230410 14:41:06.447"/>
+</kw>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<var>${pw_attr}</var>
+<arg>${input_pw}</arg>
+<arg>placeholder</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<msg timestamp="20230410 14:41:06.469" level="INFO">${pw_attr} = Password</msg>
+<status status="PASS" starttime="20230410 14:41:06.447" endtime="20230410 14:41:06.469"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${pw_attr}</arg>
+<arg>Password</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230410 14:41:06.469" endtime="20230410 14:41:06.470"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_pw}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230410 14:41:06.471" level="INFO">Typing text '123456' into text field 'xpath://*[@id="txtPassword"]'.</msg>
+<status status="PASS" starttime="20230410 14:41:06.470" endtime="20230410 14:41:06.507"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Enter password successfully</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230410 14:41:06.507" level="INFO">Enter password successfully</msg>
+<status status="PASS" starttime="20230410 14:41:06.507" endtime="20230410 14:41:06.508"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230410 14:41:09.510" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230410 14:41:06.508" endtime="20230410 14:41:09.510"/>
+</kw>
+<status status="PASS" starttime="20230410 14:41:06.210" endtime="20230410 14:41:09.510"/>
+</kw>
+<kw name="Click Login Button" library="Login">
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Loginbutton}</var>
+<arg>${loginbutton}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230410 14:41:09.532" level="INFO">${Loginbutton} = Login</msg>
+<status status="PASS" starttime="20230410 14:41:09.511" endtime="20230410 14:41:09.532"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${Loginbutton}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230410 14:41:09.533" level="INFO">Login</msg>
+<status status="PASS" starttime="20230410 14:41:09.532" endtime="20230410 14:41:09.533"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${Loginbutton}</arg>
+<arg>Login</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230410 14:41:09.533" endtime="20230410 14:41:09.533"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Verify login button</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230410 14:41:09.533" level="INFO">Verify login button</msg>
+<status status="PASS" starttime="20230410 14:41:09.533" endtime="20230410 14:41:09.534"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${buttonlink}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230410 14:41:09.534" level="INFO">Clicking element 'xpath://*[@id="frmLogin"]/div[3]/button/img'.</msg>
+<status status="PASS" starttime="20230410 14:41:09.534" endtime="20230410 14:41:14.525"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Can click log in successfully</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230410 14:41:14.526" level="INFO">Can click log in successfully</msg>
+<status status="PASS" starttime="20230410 14:41:14.526" endtime="20230410 14:41:14.526"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230410 14:41:17.528" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230410 14:41:14.526" endtime="20230410 14:41:17.528"/>
+</kw>
+<status status="PASS" starttime="20230410 14:41:09.511" endtime="20230410 14:41:17.528"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${alert}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230410 14:41:17.529" endtime="20230410 14:41:17.555"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${getalert}</var>
+<arg>${alert}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230410 14:41:17.569" level="INFO">${getalert} = Invalid Credentials</msg>
+<status status="PASS" starttime="20230410 14:41:17.556" endtime="20230410 14:41:17.569"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${getalert}</arg>
+<arg>Invalid Credentials</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230410 14:41:17.569" endtime="20230410 14:41:17.570"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230410 14:41:20.571" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230410 14:41:17.570" endtime="20230410 14:41:20.571"/>
+</kw>
+<kw name="Finish Test Case" library="CommonFunctionality" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230410 14:41:20.572" endtime="20230410 14:41:22.133"/>
+</kw>
+<status status="PASS" starttime="20230410 14:41:20.572" endtime="20230410 14:41:22.133"/>
+</kw>
+<doc>Login</doc>
+<tag>Negative Test Case</tag>
+<status status="PASS" starttime="20230410 14:40:52.941" endtime="20230410 14:41:22.133"/>
+</test>
+<status status="FAIL" starttime="20230410 14:39:52.461" endtime="20230410 14:41:22.135"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="1" skip="0">Negative Test Case</stat>
+<stat pass="1" fail="0" skip="0">Positive Test Case</stat>
+</tag>
+<suite>
+<stat pass="2" fail="1" skip="0" id="s1" name="Login Tests">Login Tests</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230410 14:39:52.719" level="ERROR">Error in file '/Users/mac/PycharmProjects/OrangeHRM/tests/Login_Tests.robot' on line 3: Resource file '../commom/CommonFunctionality.robot' does not exist.</msg>
+</errors>
+</robot>

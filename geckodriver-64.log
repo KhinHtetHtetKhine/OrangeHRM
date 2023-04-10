@@ -1,0 +1,6 @@
+1681112248274	geckodriver	INFO	Listening on 127.0.0.1:57544
+1681112248806	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "57545" "--r ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/6s/fr0lr2fn4c7c4ckg_x8d14lc0000gn/T/rust_mozprofile0IqXq7"
+1681112252928	Marionette	INFO	Listening on port 57550
+1681112252962	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: "Store does not have a valid reducer. Make sure the argument passed to combineReducers is an object whose values are reducers."
+1681112727329	Marionette	INFO	Stopped listening on port 57550

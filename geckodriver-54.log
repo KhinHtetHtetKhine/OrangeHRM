@@ -1,0 +1,5 @@
+1681110342941	geckodriver	INFO	Listening on 127.0.0.1:49936
+1681110342966	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "49937" "--r ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/6s/fr0lr2fn4c7c4ckg_x8d14lc0000gn/T/rust_mozprofileXbmfkH"
+1681110346070	Marionette	INFO	Listening on port 49940
+1681110346152	Marionette	WARN	TLS certificate errors will be ignored for this session
+1681110367843	Marionette	INFO	Stopped listening on port 49940
